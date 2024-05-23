@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>Калькулятор квадратных уравнений</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+	
+	</head>
+	
+<body class = "Main">
+	
+	<div class = "Main1"> Калькулятор квадратных уравнений </div>	
+	
+	<div class = "Main2"> Ax<sup><font size = 5> 2 </sup></font>+ Bx + C = 0 </div>
+	
+	<div class = "Main3">Введите Коэффициенты:</div>
+	
+	<div>
+		<div class = "coef">
+		<form>
+		
+			<label>Введите значение коэффициента A:</label>
+			<input type = "number" id = "A" value = "0">
+			
+			<br></br>
+			
+			<label>Введите значение коэффициента B:</label>
+			<input type = "number" id = "B" value = "0">
+			
+			<br></br>
+			
+			<label>Введите значение коэффициента C:</label>
+			<input type = "number" id = "C" value = "0">	
+			
+			<br></br>
+			
+			<input class = "but" type = "button" value = "Вычислить" onclick = "prog();">
+			
+			<br></br>
+			
+		</div>
+			
+		<br></br>
+			
+		<div id = "Otv" class = "ramka">
+				<h2>Результат:</h2>
+			<pre id = "result"></pre>
+			
+		</div>
+		</form>
+	</div>
+	
+	<script src="./js/script.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+	<body class = "bg">
+		<h1 class = "title">Калькулятор квадратных уравнений</h1><br>
+		<div class = "example">Ax<sup> 2 <font size = 3></sup></font> + Bx + C = 0</div>
+		<script>
+		let a = prompt('a');
+		if (a === null || a === ''){
+			alert("Необходимо ввести число");
+		} else {
+		let b = prompt('b');
+		if (b == null || b === ''){
+			alert("Необходимо ввести число");
+		}else{
+		let c = prompt('c');
+		if (c == null || c === ''){
+			alert("Необходимо ввести число");
+		}else{
+		a = parseFloat(a.replace(',', '.'));  
+		b = parseFloat(b.replace(',', '.'));  
+		c = parseFloat(c.replace(',', '.')); 
+		if(a == 0) {
+		alert('Ошибка, A=0 недопустимое значение');
+		} 
+		else if(isNaN(a)){
+		alert("Коэффициент A должен быть числом 0, 1 ...");
+		}
+		else if(isNaN(b)){
+		alert("Коэффициент B должен быть числом 0, 1 ...");
+		}
+		else if (isNaN(c)){
+		alert("Коэффициент C должен быть числом 0, 1 ...");
+		}
+		else if (a > 9007199254740991){
+		alert("Слишком большое число a");
+		}
+		else if (b > 9007199254740991){
+		alert("Слишком большое число b");
+		}
+		else if (c > 9007199254740991){
+		alert("Слишком большое число c");
+		}
+		else if (a < -9007199254740991){
+		alert("Слишком маленькое число a");
+		}
+		else if (b < -9007199254740991){
+		alert("Слишком маленькое число b");
+		}
+		else if (c < -9007199254740991){
+		alert("Слишком маленькое число c");
+		}
+		else if (b**2 > 9007199254740991){
+		alert( "Большое число ввода");
+		}
+		else if (4*a*c > 9007199254740991){
+		alert("Большое число ввода");
+		}
+		else if (b**2 < -9007199254740991){
+		alert("Маленькое число ввода");
+		}
+		else if (4*a*c < -9007199254740991){
+		alert("Маленькое число ввода");
+		}
+		let D = b*b-4*a*c;
+		let x1, x2;
+		if(D > 0){
+			x1 = (-b+Math.sqrt(D))/(2*a);
+			x2 = (-b-Math.sqrt(D))/(2*a);
+			alert(`x1 = ${x1.toFixed(2)}`);
+			alert(`x2 = ${x2.toFixed(2)}`);
+			alert(`Дискриминант = ${D.toFixed(2)}`);
+		} 
+		else if (D==0){
+			x1 = -b/(2*a);
+			alert(`Дискриминант = ${D.toFixed(2)}`);
+			alert(`x1 = ${x1.toFixed(2)}`);
+		} 
+		else if (D < 0){
+			D = D*(-1);
+			D1 = Math.sqrt(D);
+			D1 = (D1)/(2*a);
+			D1 = D1.toFixed(2);
+			x1 = (-b)/(2*a);
+			x2 = (-b)/(2*a);
+			D = D*(-1);
+			alert(`x1 = ${x1}+${D1}i`)
+			alert(`x2 = ${x2}-${D1}i`)
+			alert(`Дискриминант = ${D.toFixed(2)}`);
+			} 
+			}
+			}
+			}
+		</script>
+		
+	<body>
+
+<html>
